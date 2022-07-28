@@ -1,7 +1,5 @@
 package com.company;
-
 import java.util.*;
-
 public class Main {
 
     public static void main(String[] args) {
@@ -13,16 +11,13 @@ public class Main {
     }
     void runStudent(){
         Map<Student, Map<String, List<Integer>>> studMap = new HashMap<>();
-
         Student student = new Student("Romka",1);
-
         Map<String, List<Integer>> subMap = new HashMap<>();
-
+	    
         List<Integer> englishPoint = new ArrayList<>();
         englishPoint.add(5);
         englishPoint.add(10);
         subMap.put("Enhlish", englishPoint);
-
 
         List<Integer> rusPoint = new ArrayList<>();
         rusPoint.add(3);
@@ -33,15 +28,10 @@ public class Main {
         mathPoint.add(4);
         mathPoint.add(2);
         subMap.put("Math", mathPoint);
-
         studMap.put(student, subMap);
-
-
         System.out.println(student.getName() + " " + subMap + " " + studMap);
     }
-
     void run(){
-
         Set<Student> studentTreesSet = new TreeSet<>(new StudentAgeComparator()
                 .thenComparing(new StudentNameComparator()));
 
@@ -59,10 +49,7 @@ public class Main {
         studentTreesSet.add(student3);
         studentTreesSet.add(student4);
         studentTreesSet.add(student5);
-        studentTreesSet.add(student6);
-
+        studentTreesSet.add(student6);    
         System.out.println(studentTreesSet);
-
-
     }
 }
